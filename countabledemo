@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Countable Demo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="libraries/bootstrap/css/bootstrap.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="shortcut icon" href="https://www.countable.us/images/countable-logo-navbar-1519176096.png">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(n,o);analytics.integrationOptions=e};analytics.SNIPPET_VERSION="4.0.1";
+  analytics.load("YrqRn0hGKsexSWxc1WIiBApzJCDlMxGT");
+  analytics.page();
+  }}();
+</script>
+
+</head>
+<body class="index">
+
+
+<div class="row">
+    <div class="col-lg-6 col-centered">
+      <div>
+
+        <div id ="accordion">
+          <h3><a href="#" >Should we give out free ice cream to all US citizens on Wednesdays? </a></h3>
+            <div>
+              <div class="expand">
+                <p>Vote 'Yay' if you love ice cream. Vote 'Nay' if you're lactose intolerant.</p>
+                <button type="button" class="btn btn-success"  class="actionButtons" id="formButtonYay">Yay</button>
+                 <button type="button" class="btn btn-danger" class="actionButtons" id="formButtonNay">Nay</button>
+                <br>
+
+
+
+              <form name="travel" onsubmit="issue1yay(event)">
+    
+    <br><br> 
+  
+    Email: <input name="email" required="" size="75" type="email"/> 
+    <br><br>
+    <input name="submit" type="submit" value="submit"/>
+</form> 
+
+
+                <form name="travel" onsubmit="issue1nay(event)">
+    
+    <br><br> 
+  
+    Email: <input name="email" required="" size="75" type="email"/> 
+    <br><br>
+    <input name="submit" type="submit" value="submit"/>
+</form> 
+
+   
+<script type="text/javascript">
+      function issue1yay(e){
+        e.preventDefault();
+        var form = e.target;
+        var email = form["email"].value;
+
+        var user = {
+            email: email, 
+          
+        };
+        analytics.identify(email, {
+            email: email, 
+            
+        });
+        analytics.track('voted', {
+           email: email,
+           choice:'yay',
+           billId:'H123',
+           categories:['business','economy', 'taxes']
+        });
+        window.location.href = "";
+      }
+</script>
+
+<script type="text/javascript">
+      function issue1nay(e){
+        e.preventDefault();
+        var form = e.target;
+        var email = form["email"].value;
+
+        var user = {
+            email: email, 
+          
+        };
+        analytics.identify(email, {
+            email: email, 
+            
+        });
+        analytics.track('voted', {
+           email: email,
+           choice:'nay',
+           billId:'H123',
+           categories:['business','economy', 'taxes']
+        });
+        window.location.href = "";
+      }
+</script>
+
+
+<h3><a href="#">Should we give out free ice cream to all US citizens on Wednesdays? </a></h3>
+            <div>
+              <div class="expand">
+                <p>Vote 'Yay' if you love ice cream. Vote 'Nay' if you're lactose intolerant.</p>
+                <button type="button" class="btn btn-success"  class="actionButtons" id="formButtonYay">Yay</button>
+                 <button type="button" class="btn btn-danger" class="actionButtons" id="formButtonNay">Nay</button>
+                <br>
+
+
+
+              <form name="travel" onsubmit="issue2yay(event)">
+    
+    <br><br> 
+  
+    Email: <input name="email" required="" size="75" type="email"/> 
+    <br><br>
+    <input name="submit" type="submit" value="submit"/>
+</form> 
+
+
+                <form name="travel" onsubmit="issue2nay(event)">
+    
+    <br><br> 
+  
+    Email: <input name="email" required="" size="75" type="email"/> 
+    <br><br>
+    <input name="submit" type="submit" value="submit"/>
+</form> 
+
+   
+<script type="text/javascript">
+      function issue2yay(e){
+        e.preventDefault();
+        var form = e.target;
+        var email = form["email"].value;
+
+        var user = {
+            email: email, 
+          
+        };
+        analytics.identify(email, {
+            email: email, 
+            
+        });
+        analytics.track('voted', {
+           email: email,
+           choice:'yay',
+           billId:'H12',
+           categories:['business','economy', 'taxes']
+        });
+        window.location.href = "";
+      }
+</script>
+
+<script type="text/javascript">
+      function issue2nay(e){
+        e.preventDefault();
+        var form = e.target;
+        var email = form["email"].value;
+
+        var user = {
+            email: email, 
+          
+        };
+        analytics.identify(email, {
+            email: email, 
+            
+        });
+        analytics.track('voted', {
+           email: email,
+           choice:'nay',
+           billId:'H123',
+           categories:['business','economy', 'taxes']
+        });
+        window.location.href = "";
+      }
+</script>
+
+
+<!--- DO NOT DELETE BC THIS WORKS
+
+<form name="travel" onsubmit="issue1yay(event)">
+    
+    <br><br> 
+  
+    Email: <input name="email" required="" size="75" type="email"/> 
+    <br><br>
+    <input name="submit" type="submit" value="submit"/>
+</form> 
+    
+<script type="text/javascript">
+      function issue1yay(e){
+        e.preventDefault();
+        var form = e.target;
+        var email = form["email"].value;
+
+        var user = {
+            email: email, 
+          
+        };
+        analytics.identify(12345, {
+            email: email, 
+            
+        });
+        analytics.track('voted', {
+           email: email,
+           choice:'yay',
+           billId:'H123',
+           categories:['business','economy', 'taxes']
+        });
+        window.location.href = "";
+      }
+</script>
+
+-->
+
+</div>
+
+
+            </div>
+          </div>
+
+
+        </div>
+
+
+
+
+       </div>
+    </div>
+</div>
+
+
+
+</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="libraries/jqueryui/jquery-ui.min.js"></script>
+  <script src="libraries/bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/index.js"></script>
+ 
+  <!-- <script src="scripts.js"></script>-->
+</body>
+</html>
