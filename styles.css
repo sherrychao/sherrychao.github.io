@@ -1,0 +1,112 @@
+#accordion {
+    width: 100%;
+    border:0 solid #333;
+
+}
+
+#accordion h2 {
+    background:#ccc;
+    margin:0;
+    padding:5px 15px;
+    font-size:14px;
+    font-weight: bold;
+    border:1px solid #fff;
+    border-bottom:1px solid #ddd;
+    cursor:pointer;    
+    color: rgb(0,0,0);
+}
+
+#accordion h2:hover {
+    background-color: rgb(220,220,220);
+}
+
+#accordion .pane {
+    border:1px solid rgb(255,255,255);
+    border-width:0 2px;
+    display:none;
+    height:200px;
+    padding:15px;
+    color:rgb(102,102,102);
+    font-size:12px;
+}
+
+#accordion .pane:current {
+    display:block;
+}
+
+#accordion .pane h3 {
+    font-weight:normal;
+    margin:0 0 -5px 0;
+    font-size:16px;
+    color:#999;
+}
+
+.hidden { display: none; }
+
+#form1, #form2 {
+display:none;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.expand {
+    height:120px
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+p {
+  font-size: 1.1em;
+  margin: 1em 0;
+}
+.description {
+  margin: 1em auto 2.25em;
+}
+body {
+  width: 60%;
+  min-width: 300px;
+  margin: 1.5em auto;
+  color: #333;
+}
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  font-size: 2.5em;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul .inner {
+  padding-left: 1em;
+  overflow: hidden;
+  display: none;
+6
+ul .inner.show {
+  /*display: block;*/
+}
+ul li {
+  margin: .5em 0;
+}
+ul li a.toggle {
+  width: 100%;
+  display: block;
+  background: rgba(0, 0, 0, 0.78);
+  color: #fefefe;
+  padding: .75em;
+  border-radius: 0.15em;
+  transition: background .3s ease;
+}
+ul li a.toggle:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
