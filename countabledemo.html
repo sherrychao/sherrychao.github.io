@@ -30,7 +30,7 @@
 .panel {
     padding: 0 18px;
     background-color: white;
-    max-height: 0;
+    max-height: 0px;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
@@ -41,6 +41,8 @@
   analytics.page();
   }}();
 </script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <body>
 
@@ -51,27 +53,29 @@
 <button class="accordion">Making it a Federal Crime for Websites to Promote Prostitution and Sex Trafficking?</button>
 <div class="panel">
   
-                <p>This bill would amend Section 230 of the Communications Decency Act to allow state authorities to investigate and prosecute websites that facilitate sex trafficking under state sex trafficking or sexual exploitation of children laws. It would make it a federal crime for any person or entity (like Backpage.com) that publishes information in furtherance of a sex trafficking offense through knowing or reckless conduct, which would be punishable a criminal fine and up to 20 years imprisonment. Victims would be allowed to pursue damages and attorneys’ fees by filing a civil suit in U.S. district court.</p>
-                <button type="button" class="btn btn-success"  class="actionButtons" id="formButtonYay">Yay</button>
-                 <button type="button" class="btn btn-danger" class="actionButtons" id="formButtonNay">Nay</button>
+                <p>This bill would amend Section 230 of the Communications Decency Act to allow state authorities to investigate and prosecute websites that facilitate sex trafficking under state sex trafficking or sexual exploitation of children laws. It would make it a federal crime for any person or entity (like Backpage.com) that publishes information in furtherance of a sex trafficking offense through knowing or reckless conduct, which would be punishable a criminal fine and up to 20 years imprisonment. Victims would be allowed to pursue damages and attorneys’ fees by filing a civil suit in U.S. district court.
+                  <br>
+                  <br>
+
+              <button type="button" class="btn btn-success"  class="actionButtons" id="formButtonYay1">Yay</button>
+                <button type="button" class="btn btn-danger" class="actionButtons" id="formButtonNay1">Nay</button>
                 <br>
+ 
+<script>
+$( "#formButtonYay1" ).click(function() {
+  $( "#issue1yay" ).show();
+  $( "#issue1nay" ).hide();
+});
+</script>
 
+ 
+<script>
+$( "#formButtonNay1" ).click(function() {
+  $( "#issue1nay" ).show();
+  $( "#issue1yay" ).hide();
+});
+</script>
 
-
-              <form name="travel" onsubmit="issue1yay(event)">
-    <br>
-  
-    Email: <input name="email" required="" size="50" type="email"/> 
-    <input name="submit" type="submit" value="submit"/>
-</form> 
-
-                <form name="travel" onsubmit="issue1nay(event)">
-    
-    <br> 
-  
-    Email: <input name="email" required="" size="50" type="email"/> 
-    <input name="submit" type="submit" value="submit"/>
-</form> 
 
    
 <script type="text/javascript">
@@ -92,9 +96,10 @@
            email: email,
            choice:'yay',
            billId:'HB1865',
+           billName:'Making it a Federal Crime for Websites to Promote Prostitution and Sex Trafficking?',
            categories:['crime & police','government', 'legal affairs']
         });
-        window.location.href = "?event=voted";
+        window.location.href = "";
       }
 </script>
 
@@ -116,42 +121,78 @@
            email: email,
            choice:'nay',
            billId:'H1865',
+           billName:'Making it a Federal Crime for Websites to Promote Prostitution and Sex Trafficking?',
            categories:['crime & police','government', 'legal affairs']
         });
-        window.location.href = "?event=voted";
+        window.location.href = "";
       }
 </script>
+
+ <form  style="display:none" id="issue1yay" name="travel" onsubmit="issue1yay(event)">
+    <br>
+  
+    Email: <input name="email" required="" size="50" type="email" placeholder="Enter email for Yay"/> 
+    <input name="submit" type="submit" value="submit"/>
+</form> 
+<br>
+  <form  style="display:none" id="issue1nay" name="travel" onsubmit="issue1nay(event)">
+    
+  
+    Email: <input name="email" required="" size="50" type="email" placeholder="Enter email for Nay"/> 
+    <input name="submit" type="submit" value="submit"/>
+</form> 
+
+<br>
+<br>
+
+ </p>
+  
+
 
 </div>
 
 <button class="accordion">Should Grants be Available for Qualified Military Personnel to Provide Care at Civilian Trauma Centers?</button>
 <div class="panel">
    <p>This bill — the MISSION ZERO Act — would establish a grant program for qualified military personnel to provide trauma care in civilian trauma centers, providing $15 million annually through fiscal year 2022. Funding could be used to train and incorporate military trauma care providers into the trauma center, including expenditures for malpractice insurance, office space, information technology, specialty education and supervision, trauma programs, and state license fees. Grantees would have to allow the military trauma care providers to be deployed for military operations, training, or response to a mass casualty incident.
-<br>
-The bill’s full title is the Military Injury Surgical Systems Integrated Operationally Nationwide to Achieve ZERO Preventable Deaths Act.</p>
-                <button type="button" class="btn btn-success"  class="actionButtons" id="formButtonYay">Yay</button>
-                 <button type="button" class="btn btn-danger" class="actionButtons" id="formButtonNay">Nay</button>
+<br><br>
+The bill’s full title is the Military Injury Surgical Systems Integrated Operationally Nationwide to Achieve ZERO Preventable Deaths Act.
+<br><br>
+                <button type="button" class="btn btn-success"  class="actionButtons" id="formButtonYay2">Yay</button>
+                 <button type="button" class="btn btn-danger" class="actionButtons" id="formButtonNay2">Nay</button>
                 <br>
 
+<script>
+$( "#formButtonYay2" ).click(function() {
+  $( "#issue2yay" ).show();
+  $( "#issue2nay" ).hide();
+});
+</script>
+
+ 
+<script>
+$( "#formButtonNay2" ).click(function() {
+  $( "#issue2nay" ).show();
+  $( "#issue2yay" ).hide();
+});
+</script>
 
 
-              <form name="travel" onsubmit="issue2yay(event)">
+     <form style="display:none" id="issue2yay" name="travel" onsubmit="issue2yay(event)"/>
     
     <br>
-    Email: <input name="email" required="" size="50" type="email"/> 
+    Email: <input name="email" required="" size="50" type="email" placeholder="Enter email for Yay"/> 
 
     <input name="submit" type="submit" value="submit"/>
 </form> 
 
 
-                <form name="travel" onsubmit="issue2nay(event)">
+     <form style="display:none"  id="issue2nay" name="travel" onsubmit="issue2nay(event)"/>
     
     <br> 
-    Email: <input name="email" required="" size="50" type="email"/> 
+    Email: <input name="email" required="" size="50" type="email"  placeholder="Enter email for Nay"/> 
 
     <input name="submit" type="submit" value="submit"/>
 </form> 
-
    
 <script type="text/javascript">
       function issue2yay(e){
@@ -171,6 +212,7 @@ The bill’s full title is the Military Injury Surgical Systems Integrated Opera
            email: email,
            choice:'yay',
            billId:'HB880',
+           billName:'Should Grants be Available for Qualified Military Personnel to Provide Care at Civilian Trauma Centers?',
            categories:['defense','military', 'public safety']
         });
         window.location.href = "";
@@ -194,37 +236,59 @@ The bill’s full title is the Military Injury Surgical Systems Integrated Opera
         analytics.track('voted', {
            email: email,
            choice:'nay',
-            billId:'HB880',
+          billId:'HB880',
+          billName:'Should Grants be Available for Qualified Military Personnel to Provide Care at Civilian Trauma Centers?',
            categories:['defense','military', 'public safety']
         });
         window.location.href = "";
       }
 </script>
+<br>
+<br>
+<br>
+
+</p>
 
 </div>
 
 <button class="accordion">Flamethrowers? Really? Act: Making Possession of a Flamethrower a Federal Crime</button>
 <div class="panel">
  <p>This bill — known as the Flamethrowers? Really? Act — would make it a federal crime to possess or transfer a flamethrower by including flamethrowers in the ban on machineguns. Flamethrowers would be defined as “any nonstationary or transportable device designed to ignite and then emit or propel a burning stream of a combustible or flammable substance a distance of at least six feet”. Possession or transfer of a flamethrower would be punishable by fines and prison terms of up to five or 10 years.
+<br><br>
+Exceptions to this legislation would be granted to unserviceable flamethrowers that are in museums, and functioning flamethrowers carried by qualified current or retired law enforcement officers.
+
 <br>
-Exceptions to this legislation would be granted to unserviceable flamethrowers that are in museums, and functioning flamethrowers carried by qualified current or retired law enforcement officers.</p>
-                <button type="button" class="btn btn-success"  class="actionButtons" id="formButtonYay">Yay</button>
-                 <button type="button" class="btn btn-danger" class="actionButtons" id="formButtonNay">Nay</button>
+<br>
+                <button type="button" class="btn btn-success"  class="actionButtons" id="formButtonYay3">Yay</button>
+                 <button type="button" class="btn btn-danger" class="actionButtons" id="formButtonNay3">Nay</button>
                 <br>
+<script>
+$( "#formButtonYay3" ).click(function() {
+  $( "#issue3yay" ).show();
+  $( "#issue3nay" ).hide();
+});
+</script>
+
+ 
+<script>
+$( "#formButtonNay3" ).click(function() {
+  $( "#issue3nay" ).show();
+  $( "#issue3yay" ).hide();
+});
+</script>
 
 
-
-              <form name="travel" onsubmit="issue3yay(event)">
+              <form style="display:none;" id="issue3yay" name="travel" onsubmit="issue3yay(event)">
     
     <br>
-    Email: <input name="email" required="" size="50" type="email"/> 
+    Email: <input name="email" required="" size="50" type="email"  placeholder="Enter email for Yay"/> 
     <input name="submit" type="submit" value="submit"/>
 </form> 
 
 
-                <form name="travel" onsubmit="issue3nay(event)">
+                <form style="display:none;" id="issue3nay"name="travel" onsubmit="issue3nay(event)">
     <br> 
-    Email: <input name="email" required="" size="50" type="email"/> 
+    Email: <input name="email" required="" size="50" type="email"  placeholder="Enter email for Nay"/> 
     <input name="submit" type="submit" value="submit"/>
 </form> 
 
@@ -247,6 +311,7 @@ Exceptions to this legislation would be granted to unserviceable flamethrowers t
            email: email,
            choice:'yay',
            billId:'HB4901',
+            billName:'Flamethrowers? Really? Act: Making Possession of a Flamethrower a Federal Crime',
            categories:['guns','crime & police', 'federal agencies']
         });
         window.location.href = "";
@@ -271,33 +336,54 @@ Exceptions to this legislation would be granted to unserviceable flamethrowers t
            email: email,
            choice:'nay',
             billId:'HB4901',
+            billName:'Flamethrowers? Really? Act: Making Possession of a Flamethrower a Federal Crime',
            categories:['guns','crime & police', 'federal agencies']
         });
         window.location.href = "";
       }
 </script>
 
+</p>
+<br>
+<br>
+<br>
 </div>
 <button class="accordion">Should the Feds Spend $1 Billion Researching a Universal Flu Vaccine?</button>
 <div class="panel">
- <p>This bill — the Flu Vaccine Act — would authorize $1 billion in funding for the creation of a universal influenza vaccine over the next five years. The Director of the National Institute of Allergy and Infectious Diseases would use the funding to conduct or support comprehensive research leading to the vaccine’s creation. A total of $200 million in funding would be authorized for each of fiscal years 2019-2023, up from the $64 million spent in fiscal year 2017 on such research.</p>
-                <button type="button" class="btn btn-success"  class="actionButtons" id="formButtonYay">Yay</button>
-                 <button type="button" class="btn btn-danger" class="actionButtons" id="formButtonNay">Nay</button>
+ <p>This bill — the Flu Vaccine Act — would authorize $1 billion in funding for the creation of a universal influenza vaccine over the next five years. The Director of the National Institute of Allergy and Infectious Diseases would use the funding to conduct or support comprehensive research leading to the vaccine’s creation. A total of $200 million in funding would be authorized for each of fiscal years 2019-2023, up from the $64 million spent in fiscal year 2017 on such research.
+  <br>
+  <br>
+                <button type="button" class="btn btn-success"  class="actionButtons" id="formButtonYay4">Yay</button>
+                 <button type="button" class="btn btn-danger" class="actionButtons" id="formButtonNay4">Nay</button>
                 <br>
 
+<script>
+$( "#formButtonYay4" ).click(function() {
+  $( "#issue4yay" ).show();
+  $( "#issue4nay" ).hide();
+});
+</script>
+
+ 
+<script>
+$( "#formButtonNay4" ).click(function() {
+  $( "#issue4nay" ).show();
+  $( "#issue4yay" ).hide();
+});
+</script>
 
 
-              <form name="travel" onsubmit="issue4yay(event)">
+  <form style="display:none;" id="issue4yay" name="travel" onsubmit="issue4yay(event)">
     
     <br>
-    Email: <input name="email" required="" size="50" type="email"/> 
+    Email: <input name="email" required="" size="50" type="email"  placeholder="Enter email for Yay"/> 
     <input name="submit" type="submit" value="submit"/>
 </form> 
 
 
-                <form name="travel" onsubmit="issue4nay(event)">
+                <form style="display:none;" id="issue4nay" name="travel" onsubmit="issue4nay(event)">
     <br> 
-    Email: <input name="email" required="" size="50" type="email"/> 
+    Email: <input name="email" required="" size="50" type="email"  placeholder="Enter email for Nay"/> 
     <input name="submit" type="submit" value="submit"/>
 </form> 
 
@@ -319,6 +405,7 @@ Exceptions to this legislation would be granted to unserviceable flamethrowers t
         analytics.track('voted', {
            email: email,
            choice:'yay',
+           billName:'Should the Feds Spend $1 Billion Researching a Universal Flu Vaccine?',
            billId:'SB2438',
            categories:['federal agencies','government', 'aging']
         });
@@ -344,35 +431,54 @@ Exceptions to this legislation would be granted to unserviceable flamethrowers t
            email: email,
            choice:'nay',
            billId:'SB2438',
+           billName:'Should the Feds Spend $1 Billion Researching a Universal Flu Vaccine?',
            categories:['federal agencies','government', 'aging']
         });
         window.location.href = "";
       }
 </script>
+</p>
+<br>
+<br>
+<br>
 
 </div>
 <button class="accordion">Should the White House Report to Congress on the Status of Employees With Security Clearances?</button>
 <div class="panel">
  <p>This bill — known as the CLEARANCES Act — would require the White House to report regularly on the status of security clearance holders working in the Executive Office of the President in an effort to promote accountability and oversight of who has access to classified information. It would cover the president’s staff, and anyone who is detailed from a government agency, university, think tank, or the private sector to work at the White House or the Office. The first report would be due within three months of this bill’s enactment and subsequent reports due every three months thereafter.
 
-</p>
-                <button type="button" class="btn btn-success"  class="actionButtons" id="formButtonYay">Yay</button>
-                 <button type="button" class="btn btn-danger" class="actionButtons" id="formButtonNay">Nay</button>
+<br>
+<br>
+                <button type="button" class="btn btn-success"  class="actionButtons" id="formButtonYay5">Yay</button>
+                 <button type="button" class="btn btn-danger" class="actionButtons" id="formButtonNay5">Nay</button>
                 <br>
+<script>
+$( "#formButtonYay5" ).click(function() {
+  $( "#issue5yay" ).show();
+  $( "#issue5nay" ).hide();
+});
+</script>
+
+ 
+<script>
+$( "#formButtonNay5" ).click(function() {
+  $( "#issue5nay" ).show();
+  $( "#issue5yay" ).hide();
+});
+</script>
 
 
-
-              <form name="travel" onsubmit="issue5yay(event)">
+              <form style="display:none" id="issue5yay" name="travel" onsubmit="issue5yay(event)">
     
     <br>
-    Email: <input name="email" required="" size="50" type="email"/> 
+    Email: <input name="email" required="" size="50" type="email"  placeholder="Enter email for Yay"/> 
     <input name="submit" type="submit" value="submit"/>
 </form> 
 
 
-                <form name="travel" onsubmit="issue5nay(event)">
+            <form style="display:none" id="issue5nay"  name="travel" onsubmit="issue5nay(event)">
     <br> 
-    Email: <input name="email" required="" size="50" type="email"/> 
+    Email: <input name="email" required="" size="50" type="email"  placeholder="Enter email for Nay"/> 
     <input name="submit" type="submit" value="submit"/>
 </form> 
 
@@ -395,6 +501,7 @@ Exceptions to this legislation would be granted to unserviceable flamethrowers t
            email: email,
            choice:'yay',
            billId:'HB5019',
+           billName:'Should the White House Report to Congress on the Status of Employees With Security Clearances?',
            categories:['defense','federal agencies', 'government']
         });
         window.location.href = "";
@@ -419,35 +526,57 @@ Exceptions to this legislation would be granted to unserviceable flamethrowers t
            email: email,
            choice:'nay',
            billId:'HB5019',
+           billName:'Should the White House Report to Congress on the Status of Employees With Security Clearances?',
            categories:['defense','federal agencies', 'government']
         });
         window.location.href = "";
       }
 </script>
+</p>
+<br>
+<br>
+<br>
 
 </div>
 <button class="accordion">Fix NICS Act: Improving the Accuracy of the Background Check System for Gun Purchases</button>
 <div class="panel">
  <p>This bill — known as the Fix NICS Act — would seek to improve to the National Instant Criminal Background Check System (NICS) by ensuring federal and state authorities comply with existing law and accurately report relevant criminal history records to the NICS.
+<br><br>
+It would require federal agencies and states to produce NICS implementation plans that focus on uploading all information to the background check system showing a person is prohibited from purchasing or possessing firearms under current law, including measures to verify the records. To ensure federal agencies comply, the Dept. of Justice (DOJ) would report twice per year on failures by agencies to report such records to NICS and political appointees at such agencies couldn’t receive bonuses.
 <br>
-It would require federal agencies and states to produce NICS implementation plans that focus on uploading all information to the background check system showing a person is prohibited from purchasing or possessing firearms under current law, including measures to verify the records. To ensure federal agencies comply, the Dept. of Justice (DOJ) would report twice per year on failures by agencies to report such records to NICS and political appointees at such agencies couldn’t receive bonuses.</p>
-                <button type="button" class="btn btn-success"  class="actionButtons" id="formButtonYay">Yay</button>
-                 <button type="button" class="btn btn-danger" class="actionButtons" id="formButtonNay">Nay</button>
+<br>
+                <button type="button" class="btn btn-success"  class="actionButtons" id="formButtonYay6">Yay</button>
+                 <button type="button" class="btn btn-danger" class="actionButtons" id="formButtonNay6">Nay</button>
                 <br>
 
+  <script>
+$( "#formButtonYay6" ).click(function() {
+  $( "#issue6yay" ).show();
+  $( "#issue6nay" ).hide();
+});
+</script>
+
+ 
+<script>
+$( "#formButtonNay6" ).click(function() {
+  $( "#issue6nay" ).show();
+  $( "#issue6yay" ).hide();
+});
+</script>
 
 
-              <form name="travel" onsubmit="issue6yay(event)">
+
+              <form id="issue6yay" style="display:none" name="travel" onsubmit="issue6yay(event)">
     
     <br>
-    Email: <input name="email" required="" size="50" type="email"/> 
+    Email: <input name="email" required="" size="50" type="email"  placeholder="Enter email for Yay"/> 
     <input name="submit" type="submit" value="submit"/>
 </form> 
 
 
-                <form name="travel" onsubmit="issue6nay(event)">
+                <form id="issue6nay" style="display:none" name="travel" onsubmit="issue6nay(event)">
     <br> 
-    Email: <input name="email" required="" size="50" type="email"/> 
+    Email: <input name="email" required="" size="50" type="email"  placeholder="Enter email for Nay"/> 
     <input name="submit" type="submit" value="submit"/>
 </form> 
 
@@ -470,6 +599,7 @@ It would require federal agencies and states to produce NICS implementation plan
            email: email,
            choice:'yay',
            billId:'SB2135',
+           billName:'Fix NICS Act: Improving the Accuracy of the Background Check System for Gun Purchases',
            categories:['guns','crime & police','public safety']
         });
         window.location.href = "";
@@ -494,35 +624,57 @@ It would require federal agencies and states to produce NICS implementation plan
            email: email,
            choice:'nay',
             billId:'SB2135',
+            billName:'Fix NICS Act: Improving the Accuracy of the Background Check System for Gun Purchases',
            categories:['guns','crime & police','public safety']
         });
         window.location.href = "";
       }
 </script>
+</p>
+<br>
+<br>
+<br>
 
 </div>
 <button class="accordion">Does the IRS Need to Stop Collecting Information on Donors to Tax-Exempt Groups?</button>
 <div class="panel">
  <p>This bill would prohibit the Internal Revenue Service (IRS) from requiring that the identity of contributors to 501(c) organizations be included in Schedule B of those groups’ tax returns. The IRS has been considering eliminating Schedule B disclosures altogether since December 2015.
+<br><br>
+Current law requires 501(c) groups to submit Schedule B with a list of names, addresses, and donation amounts belonging to donors who gave more than $5,000 in a single tax year. Although the information is confidential under federal law, there have been instances of the IRS and state regulators making the disclosures publicly available..
 <br>
-Current law requires 501(c) groups to submit Schedule B with a list of names, addresses, and donation amounts belonging to donors who gave more than $5,000 in a single tax year. Although the information is confidential under federal law, there have been instances of the IRS and state regulators making the disclosures publicly available..</p>
-                <button type="button" class="btn btn-success"  class="actionButtons" id="formButtonYay">Yay</button>
-                 <button type="button" class="btn btn-danger" class="actionButtons" id="formButtonNay">Nay</button>
+<br>
+                <button type="button" class="btn btn-success"  class="actionButtons" id="formButtonYay7">Yay</button>
+                 <button type="button" class="btn btn-danger" class="actionButtons" id="formButtonNay7">Nay</button>
                 <br>
 
+  <script>
+$( "#formButtonYay7" ).click(function() {
+  $( "#issue7yay" ).show();
+  $( "#issue7nay" ).hide();
+});
+</script>
+
+ 
+<script>
+$( "#formButtonNay7" ).click(function() {
+  $( "#issue7nay" ).show();
+  $( "#issue7yay" ).hide();
+});
+</script>
 
 
-              <form name="travel" onsubmit="issue7yay(event)">
+
+              <form style="display:none" id ="issue7yay" name="travel" onsubmit="issue7yay(event)">
     
     <br>
-    Email: <input name="email" required="" size="50" type="email"/> 
+    Email: <input name="email" required="" size="50" type="email" placeholder="Enter email for Yay"/> 
     <input name="submit" type="submit" value="submit"/>
 </form> 
 
 
-                <form name="travel" onsubmit="issue7nay(event)">
+                <form style="display:none" id ="issue7nay" name="travel" onsubmit="issue7nay(event)">
     <br> 
-    Email: <input name="email" required="" size="50" type="email"/> 
+    Email: <input name="email" required="" size="50" type="email" placeholder="Enter email for Nay"/> 
     <input name="submit" type="submit" value="submit"/>
 </form> 
 
@@ -545,6 +697,7 @@ Current law requires 501(c) groups to submit Schedule B with a list of names, ad
            email: email,
            choice:'yay',
            billId:'HB4916',
+           billName:'Does the IRS Need to Stop Collecting Information on Donors to Tax-Exempt Groups?',
            categories:['political groups','civil rights','federal agencies']
         });
         window.location.href = "";
@@ -569,33 +722,55 @@ Current law requires 501(c) groups to submit Schedule B with a list of names, ad
            email: email,
            choice:'nay',
             billId:'HB4916',
+            billName:'Does the IRS Need to Stop Collecting Information on Donors to Tax-Exempt Groups?',
            categories:['political groups','civil rights','federal agencies']
         });
         window.location.href = "";
       }
 </script>
+</p>
+<br>
+<br>
+<br>
 
 </div>
 <button class="accordion">If Local Schools Approve, Should Off-Duty & Retired Cops be Allowed to Carry Concealed Firearms in School Zones as Security?</button>
 <div class="panel">
- <p>Vote 'Yay' if you love ice cream. Vote 'Nay' if you're lactose intolerant.</p>
-                <button type="button" class="btn btn-success"  class="actionButtons" id="formButtonYay">Yay</button>
-                 <button type="button" class="btn btn-danger" class="actionButtons" id="formButtonNay">Nay</button>
+ <p>This bill would amend the Gun Free School Zones Act to allow a qualified off-duty or retired law enforcement officer to carry a concealed firearm in a school zone if a local school board adopts a policy allowing it. Current law allows only on-duty police officers to carry firearms in school zones. The bill would impose no requirements on local school districts.
+
+<br>
+<br>
+                <button type="button" class="btn btn-success"  class="actionButtons" id="formButtonYay8">Yay</button>
+                 <button type="button" class="btn btn-danger" class="actionButtons" id="formButtonNay8">Nay</button>
                 <br>
+      <script>
+$( "#formButtonYay8" ).click(function() {
+  $( "#issue8yay" ).show();
+  $( "#issue8nay" ).hide();
+});
+</script>
+
+ 
+<script>
+$( "#formButtonNay8" ).click(function() {
+  $( "#issue8nay" ).show();
+  $( "#issue8yay" ).hide();
+});
+</script>
 
 
 
-              <form name="travel" onsubmit="issue8yay(event)">
+              <form style="display:none" id="issue8yay" name="travel" onsubmit="issue8yay(event)">
     
     <br>
-    Email: <input name="email" required="" size="50" type="email"/> 
+    Email: <input name="email" required="" size="50" type="email" placeholder="Enter email for Yay"/> 
     <input name="submit" type="submit" value="submit"/>
 </form> 
 
 
-                <form name="travel" onsubmit="issue8nay(event)">
+                <form style="display:none" id="issue8nay" name="travel" onsubmit="issue8nay(event)">
     <br> 
-    Email: <input name="email" required="" size="50" type="email"/> 
+    Email: <input name="email" required="" size="50" type="email" placeholder="Enter email for Nay"/> 
     <input name="submit" type="submit" value="submit"/>
 </form> 
 
@@ -618,6 +793,7 @@ Current law requires 501(c) groups to submit Schedule B with a list of names, ad
            email: email,
            choice:'yay',
            billId:'HB2513',
+           billName:'If Local Schools Approve, Should Off-Duty & Retired Cops be Allowed to Carry Concealed Firearms in School Zones as Security?',
            categories:['guns','crime & police','government']
         });
         window.location.href = "";
@@ -642,11 +818,17 @@ Current law requires 501(c) groups to submit Schedule B with a list of names, ad
            email: email,
            choice:'nay',
             billId:'HB2513',
+            billName:'If Local Schools Approve, Should Off-Duty & Retired Cops be Allowed to Carry Concealed Firearms in School Zones as Security?',
            categories:['guns','crime & police','government']
         });
         window.location.href = "";
       }
 </script>
+
+</p>
+<br>
+<br>
+<br>
 
 </div>
 
