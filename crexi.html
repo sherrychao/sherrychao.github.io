@@ -54,18 +54,13 @@
       function register(e){
         e.preventDefault();
         var form = e.target;
-        var email = form["email"].value;
         var fname = form["fname"].value;
         var lname = form["lname"].value;
         var phoneNumber = form["phoneNumber"].value;
         var select = document.getElementById("industryRole");
         var industryRole = select.value;   
-        var user = {
-            email: email, 
-          
-        };
+        
         analytics.identify(email, {
-            email: email,
             fname: fname,
             lname: lname,
             phoneNumber: phoneNumber,
@@ -73,7 +68,6 @@
             
         });
         analytics.track('Register', {
-           email: email
         });
         window.location.href = "";
       }
@@ -82,7 +76,6 @@
  <form id="register" name="travel" onsubmit="register(event)">
     <br>
   
-    Email: <input name="email" required="" size="50" type="email" placeholder="Email"/> 
     <br/>
     First Name:<input name="fname" required="" size="50" type="fname" placeholder="First Name"/> 
         <br/>
