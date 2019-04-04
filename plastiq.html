@@ -15,5 +15,17 @@
 <style></style>
 </head>
 <body>
-<button id="testbutton" type="button">Click Me!</button>
+<button id="testbutton" type="button" onclick="myFunction()">Click Me!</button>
+  
+  <script>
+    function myFunction() {
+  analytics.track('Button Clicked', {
+  buttonText: 'Click Me!',
+});
+}
+  
+  
+  </script>
+  
+  
 </body>
