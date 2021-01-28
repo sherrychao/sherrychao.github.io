@@ -1,0 +1,17 @@
+{
+    "brand": "Ray-Ban",
+    "suggestedProduct": [
+        {
+            "name": "Ray-Ban Round Metal",
+            "imageUrl": "https://img-cdn1.cdnsbg.com/600/1/14/102731_1599492470960.jpg"
+        },
+        {
+            "name": "Ray-Ban Wayfarer",
+            "imageUrl": "https://img-cdn1.cdnsbg.com/600/1/14/493139_1599492594730.jpg"
+        },
+        {
+            "name": "Ray-Ban Clubmaster",
+            "imageUrl": "https://img-cdn1.cdnsbg.com/600/1/14/52167_1599492409982.jpg"
+        }
+    ]
+}
