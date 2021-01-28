@@ -1,0 +1,17 @@
+{
+    "brand": "Tom Ford",
+    "suggestedProduct": [
+        {
+            "name": "Tom Ford Julie",
+            "imageUrl": "https://img-cdn1.cdnsbg.com/600/1/58/441318_1599496261948.jpg"
+        },
+        {
+            "name": "Tom Ford Whitney"
+            "imageUrl": "https://img-cdn1.cdnsbg.com/600/1/58/110215_1599495961598.jpg"
+        },
+        {
+            "name": "Tom Ford Pia",
+            "imageUrl": "https://img-cdn1.cdnsbg.com/600/1/58/419926_1599496245107.jpg"
+        }
+    ]
+}
